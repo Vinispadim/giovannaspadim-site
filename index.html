@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giovanna Spadim | Psicóloga Clínica</title>
+    <style>
+        /* --- CONFIGURAÇÕES GERAIS --- */
+        :root {
+            /* Cores baseadas no Logo Roxo/Azul */
+            --primary-color: #7B68EE; /* Tom de roxo médio */
+            --secondary-color: #48D1CC; /* Tom turquesa suave */
+            --text-color: #333333;
+            --light-bg: #f9f9f9;
+            --white: #ffffff;
+            --font-main: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            --font-script: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Ideal seria importar a fonte do logo */
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: var(--font-main);
+            color: var(--text-color);
+            line-height: 1.6;
+            background-color: var(--white);
+        }
+
+        a { text-decoration: none; }
+        ul { list-style: none; }
+
+        /* --- BOTÕES --- */
+        .btn {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 12px 30px;
+            border-radius: 30px;
+            font-weight: bold;
+            transition: 0.3s;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            border: 2px solid var(--primary-color);
+        }
+
+        .btn:hover {
+            background-color: transparent;
+            color: var(--primary-color);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            color: var(--primary-color);
+            border: 2px solid var(--primary-color);
+        }
+
+        .btn-outline:hover {
+            background-color: var(--primary-color);
+            color: var(--white);
+        }
+
+        /* --- HEADER --- */
+        header {
+            background: var(--white);
+            padding: 20px 5%;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-text {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            <img src="logo.jpg" alt="Logo Giovanna Spadim" class="hero-logo-img">
+        }
+
+        nav ul { display: flex; gap: 20px; }
+        nav a { color: var(--text-color); font-weight: 500; font-size: 0.9rem; }
+        nav a:hover { color: var(--primary-color); }
+
+        /* --- HERO SECTION --- */
+        .hero {
+            height: 90vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
+            padding: 0 20px;
+            margin-top: 60px;
+        }
+
+        .hero-content h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            font-weight: 300;
+        }
+
+        .hero-content span {
+            display: block;
+            font-size: 1.2rem;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        .hero-logo-img {
+            max-width: 250px;
+            margin-bottom: 30px;
+            /* Aqui entrará a imagem do logo (ex: o roxo) */
+        }
+
+        /* --- SOBRE --- */
+        .about {
+            padding: 80px 10%;
+            background-color: var(--white);
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 50px;
+        }
+
+        .about-img {
+            flex: 1;
+            min-width: 300px;
+            height: 400px;
+            background-color: #ddd; /* Placeholder para foto dela */
+            border-radius: 10px;
+            background-image: url('https://placehold.co/400x500/eee/999?text=Foto+da+Giovanna');
+            background-size: cover;
+        }
+
+        .about-text {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .about-text h2 { margin-bottom: 20px; color: var(--primary-color); }
+
+        /* --- SERVIÇOS --- */
+        .services {
+            padding: 80px 10%;
+            background-color: var(--light-bg);
+            text-align: center;
+        }
+
+        .services h2 { margin-bottom: 50px; color: var(--primary-color); }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            background: var(--white);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: 0.3s;
+        }
+
+        .service-card:hover { transform: translateY(-5px); }
+        .service-card h3 { margin-bottom: 15px; color: var(--secondary-color); }
+
+        /* --- CONTATO / LOCALIZAÇÃO --- */
+        .contact {
+            padding: 80px 10%;
+            text-align: center;
+        }
+
+        .contact-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 40px;
+            text-align: left;
+        }
+
+        .contact-info, .contact-map { flex: 1; min-width: 300px; }
+        
+        .contact-item { margin-bottom: 20px; font-size: 1.1rem; }
+        .contact-item strong { display: block; color: var(--primary-color); font-size: 0.9rem; }
+
+        /* --- FOOTER --- */
+        footer {
+            background: var(--text-color);
+            color: var(--white);
+            text-align: center;
+            padding: 20px;
+            font-size: 0.8rem;
+        }
+
+        /* --- RESPONSIVIDADE --- */
+        @media (max-width: 768px) {
+            .hero-content h1 { font-size: 2rem; }
+            nav { display: none; } /* Simplificação para mobile */
+            header { justify-content: center; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo-text">Giovanna Spadim</div>
+        <nav>
+            <ul>
+                <li><a href="#sobre">Sobre Mim</a></li>
+                <li><a href="#servicos">Especialidades</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+        <a href="https://wa.me/5511999999999" class="btn">Agendar Agora</a>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <img src="logo.jpg" alt="Logo Giovanna Spadim" class="hero-logo-img">
+            
+            <span>PSICOLOGIA CLÍNICA</span>
+            <h1>Encontre seu ponto de equilíbrio.</h1>
+            <p style="margin-bottom: 30px; color: #666;">
+                Um espaço seguro e acolhedor para sua jornada de autoconhecimento.
+            </p>
+            <div class="buttons">
+                <a href="#sobre" class="btn-outline">Conhecer a Giovanna</a>
+                <a href="https://wa.me/5511999999999" class="btn">Agendar Consulta</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="sobre" class="about">
+        <div class="about-img"></div>
+        <div class="about-text">
+            <h2>Olá, eu sou a Giovanna</h2>
+            <p>Sou psicóloga clínica dedicada a promover saúde mental e bem-estar. Acredito na terapia como uma âncora: não para te prender, mas para te dar estabilidade enquanto você navega pelas suas emoções.</p>
+            <br>
+            <p>Meu trabalho é pautado na ética, na escuta ativa e no acolhimento sem julgamentos.</p>
+            <br>
+            <a href="#contato" class="btn-outline">Ver Abordagem</a>
+        </div>
+    </section>
+
+    <section id="servicos" class="services">
+        <h2>Como posso te ajudar</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <h3>Terapia Individual</h3>
+                <p>Sessões voltadas para autoconhecimento, tratamento de ansiedade, depressão e questões pessoais.</p>
+            </div>
+            <div class="service-card">
+                <h3>Orientação Profissional</h3>
+                <p>Suporte para tomadas de decisão na carreira e planejamento de futuro.</p>
+            </div>
+            <div class="service-card">
+                <h3>Atendimento Online</h3>
+                <p>Acolhimento e terapia no conforto da sua casa, através de videochamada segura.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contato" class="contact">
+        <h2>Vamos conversar?</h2>
+        <p>Entre em contato para tirar dúvidas ou agendar sua primeira sessão.</p>
+        
+        <div class="contact-container">
+            <div class="contact-info">
+                <div class="contact-item">
+                    <strong>WHATSAPP</strong>
+                    (11) 99999-9999
+                </div>
+                <div class="contact-item">
+                    <strong>EMAIL</strong>
+                    contato@giovannaspadim.com.br
+                </div>
+                <div class="contact-item">
+                    <strong>ENDEREÇO</strong>
+                    Av. Exemplo, 123, Sala 405<br>Bairro, Cidade - SP
+                </div>
+                <br>
+                <a href="https://wa.me/5511999999999" class="btn">Chamar no WhatsApp</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Giovanna Spadim Psicologia. Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+</html>
